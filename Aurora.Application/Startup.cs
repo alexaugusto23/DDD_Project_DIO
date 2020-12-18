@@ -36,6 +36,17 @@ namespace Aurora.Application
 
             app.UseMvc();
             app.UseSwaggerDependency();
+
+                        app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Worker");
+                c.RoutePrefix = string.Empty;
+            });
         }
     }
 }
+
+
+
+
+            
